@@ -14,15 +14,45 @@
 		.item{
 			list-style: none;
 			display: inline-block;
+
 		}
 		.item>a{
 			text-decoration: none;
 			line-height: 42px;
 			padding-left: 10px;
-			color: #fff
+			color: #fff;
 		}
 		.item:hover{
 			background:pink;
+		}
+		.item1>a{
+			text-decoration: none;
+		
+
+
+		}
+		#submenu{
+			list-style: none;
+			display: none;
+			width: 60px;
+			text-align: left;
+		}
+		.item:hover #submenu{
+			display: block;
+			position:absolute;
+
+
+
+		}
+		.item1:hover {
+		background:pink;
+
+		}
+		#submenu{
+			padding-left: 10px;
+			width: 65px;
+			background-color: pink; 
+			
 		}
 	</style>
 </head>
@@ -33,7 +63,20 @@
 				<a href="#"><i class="fas fa-home"></i> Ekko</a>	
 			</li>
 			<li class="item">
-				<a href="#">Chaoekko</a>	
+				<a href="#">Chaoekko</a>
+				
+					<ul id="submenu">
+						<li class="item1">
+							<a href="">tho1</a>
+						</li>
+						<li class="item1">
+							<a href="">tho2</a>
+						</li>
+						<li class="item1">
+							<a href="">tho3</a>
+						</li>
+					</ul>
+					
 			</li>
 			<li class="item">
 				<a href="#">HiEkko</a>	

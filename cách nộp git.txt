@@ -1,0 +1,4 @@
+﻿git add .
+git commit -m "tên commit"
+git push origin master
+kiểm tra git status
