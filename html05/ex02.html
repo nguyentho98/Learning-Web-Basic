@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.item{
+			display: inline-block;
+		}
+		.item>a{
+			text-decoration: none;
+			color: #fff;
+			padding-right: 10px;
+			line-height: 30px;
+
+		}
+		.menu{
+			list-style: none;
+
+		}
+		ul{
+			background-color: #000;
+			height: 30px;
+			width: 50%;
+	
+		}
+		.item:hover {
+			background-color: #81F781;
+		}
+		.item:hover .submenu{
+			display: block;
+
+		}
+		.submenu{
+			display: none;
+			list-style: none;
+			width: 30px;
+			height: 60px;
+		}
+		.menu .item .submenu .subitem>a{
+			text-decoration: none;
+			color: #fff;
+			padding-left: 0;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="menu">
+			<li class="item">
+				<a href=""> Home </a>
+				<ul class="submenu">
+					<li class="subitem">
+						<a href="">ekko1</a>
+					</li>
+					<li class="subitem">
+						<a href="">ekko2</a>
+					</li>
+					<li class="subitem">
+						<a href="">ekko2</a>
+					</li>
+
+				</ul>
+			</li>
+			<li class="item">
+				<a href=""> News</a>
+			</li>
+			<li class="item">
+				<a href=""> Dropclown</a>
+			</li>
+			
+
+		</ul>
+	</nav>
+</body>
+</html>

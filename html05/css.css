@@ -1,0 +1,205 @@
+.header{
+	border: 1px solid ;
+	width: 80%;
+	height: 250px;
+	margin: 0 auto;
+	background-color: #E6E6E6;
+}
+	.header-tieude{
+		height: 50px;
+		background-color: red;
+		color: #fff;
+		margin: 0;
+		padding: 0 10%;
+	}
+	.header-menu{
+		color: #fff;
+		background-color: #B40404;
+		margin: 0;
+		padding: 0 10%;
+		height: 30px;
+	}
+	.header-quangcao1{
+		height: 25px;
+		width: 70%;
+		margin: 0 auto;
+		text-align: right;
+		padding-top: 5px;
+
+	}
+	.header-quangcao2{
+		background-image: url(images/EZV3A6D4CREHPLDIZGR2W5.jpg);
+		height: 100px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 70%;
+		margin: 0 auto;
+
+	}
+#center{
+	border: 1px solid;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 15px;
+
+}
+	.clearfix{
+		clear: both;
+	}
+	.center-left{
+		width: 65%;
+		float: left;
+	}	
+		/*khung 1*/
+		.center-left-1{
+			border-bottom: 1px solid;
+		}
+		.center-left-1>h2{
+				margin-top: 0;
+			}
+		.center-left-1-left{
+			width: 40%;
+    		float: left;
+    		margin-right: 1em;
+		}
+			.center-left-1-left>p{
+				margin-top: 0;
+				
+			}
+			.center-left-1-left .thegioi{
+				margin-top:0;
+				margin-bottom: 0;	
+			}
+		/*khung 2*/
+		.center-left-2{
+			margin-top:10px;
+			display: inline-flex;
+			border-bottom: 1px solid;
+			
+		}
+		.center-left-2-left{
+			width: 32%;
+			border-right: 1px solid;
+			display: inline-block;
+			padding: 0 6px;
+			
+		}
+		.center-left-2-right{
+			width: 27%;
+			border-right: 0px;
+		}
+		.center-left-2-right .chuchu{
+			margin-bottom: 0;
+		}
+		.center-left-2-right .thegioi{
+			margin: 0;
+		}
+		/*khung 3*/
+		
+		.center-left-3-left{
+			float: left;
+			width: 48%;
+		}
+		.center-left-3-right{
+			float: left;
+			width: 48%;
+			margin-left: 15px
+		}
+	/*	khung 4	*/
+		.center-left-4{
+			border-bottom: 1px solid;
+		}
+		.center-left-4>p{
+			font-size: 20px;
+		}
+		.center-left-4 .thegioi{
+			margin: 0;
+		}
+		.center-left-4 .anhbe{
+			width: 8em;
+			margin-bottom: 30px;
+		}
+		
+		.center-left-4-anh-1{
+			width: 20%;
+			display: inline-block;
+			
+		}
+		.center-left-4-chu-1{
+			width: 20%;
+			display: inline-block;
+			margin-left: 30px;
+			padding: 0 10px;
+		}
+		.center-left-4-anh-2{
+			width: 20%;
+			display: inline-block;
+
+		}
+		.center-left-4-chu-2{
+			width: 20%;
+			display: inline-block;
+			margin-left: 30px;
+			padding: 0 10px;
+		
+		}
+		/*khung 5*/
+		.center-left-5{
+			border-bottom:  1px solid;
+		}
+		.center-left-5>p{
+			font-size: 20px;
+		}
+		.center-left-5 .center-left-5-left>h3{
+			margin-top: 0;
+		}
+		.center-left-5-left{
+			width: 35%;
+			float: left;
+		}
+		.center-left-5-right{
+			width: 63%;
+			height: 250px;
+			float: right;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-image: url(images/150921123226_islamic_state_flag_is_640x360_islamicstate_nocredit.jpg);
+		}
+		/*khung 6*/
+		.center-left-6{
+
+		}
+		.center-left-6-left{
+			width: 35%
+			height: 150px;
+			
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-image: url(images/151115163552_paris_attack_woman_in_australia_640x360_afpgetty_nocredit.jpg);
+		}
+		.center-left-6-right{
+			width: 63%;
+
+		}
+		.center-left-1-right{
+			height: 11em;
+    		width: 54%;
+			float: left;
+			background-image: url(images/151107121944_russian_plane_640x360_bbc_nocredit.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+
+	.center-right{
+		width: 34%;
+		background-color: #E6E6E6;
+		float: left;
+		text-align: center;
+	}
+		.center-right .chu{
+			margin-top:0;
+		}
+		.center-right-1>p{
+			font-size: 20px;
+		}
