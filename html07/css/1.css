@@ -1,0 +1,405 @@
+	header{
+			padding: 0 10%;
+			margin: 0 auto;
+		}
+		.menu{
+		
+		}
+		.menu .menu-left{
+			
+			display: inline-block;
+		}
+		.menu .menu-left>h1{
+			padding-left: 100px;
+		}
+		.menu .menu-right{
+			 margin-left: 320px;
+			display: inline-block;
+		}
+		.menu .menu-right .item{
+			list-style: none;
+			float: left;
+			padding-right: 40px;
+		}
+		.menu .menu-right .item:first-child{
+			display: none;
+		}
+		.menu .menu-right .item>a{
+			text-decoration: none;
+		}
+		.anh img{
+			width: 100%;
+		}
+		.cham{
+		    width: 10%;
+			margin: 0 auto;
+			text-align: center;
+
+		}
+		.cham .tron{
+			border-radius: 50%;
+			width: 5px;
+			height: 5px;
+			background-color: red;
+			display: inline-block;
+			margin: 0 auto;
+		}
+		section{
+			padding: 0 10%;
+			margin-bottom: 100px;
+		}
+		.hinh .hinh-tron{
+			display: inline-block;
+			margin:0 90px;
+
+		}
+		.hinh .hinh-tron>p{
+			color: #000;
+			margin: 30px -24px;
+    		width: 150px;
+		}
+		.clearfix{
+			clear: both;
+		}
+		.dong-chu-1{
+			text-align: center;
+			font-size: 18px;
+		}
+		.dong-chu-2{
+			text-align: center;
+			font-size: 24px;
+			margin-bottom: 80px;
+		}
+		.khung1 .tieude{
+			
+		}
+		
+		.khung1 .hinh{
+
+		}
+		.khung1 .hinh .hinhhinh{
+			width: 24%;
+			display: inline-block;
+			position: relative;
+		}
+		.khung1 .hinh .hinhhinh {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: red;
+			
+		}
+		.khung1 .hinh .hinhhinh i{
+			position: absolute;
+		}
+		/*phan giua khung2*/
+		.hinh-tron {
+    	width: 80px;
+    	height: 80px;
+    	border-radius: 50%;
+    	border: 1px solid #ff5200;
+    	background-color: #ff5200;
+    	color: #fff;
+    
+		}
+		.hinh-tron i{
+			font-size: 30px;
+     		   padding-left: 20px;
+         	line-height: 80px;
+		}
+		.khung2{
+
+		}
+		.khung2>p{
+			text-align: center;
+		}
+		.khung2-chu1{
+			font-size: 24px;
+		}
+		.khung2-chu2{
+			font-size: 13px;
+		}
+		.khung2-chu3{
+			font-size: 13px;
+		}
+		.khung2-anh1{
+			margin-left:10%;
+			width: 40%;
+			display:inline-block;
+		}
+		.khung2-anh1 img{
+			width: 100%;
+		}
+		.khung2-anh2{
+			width: 40%;
+			display: inline-block;
+		}
+		.khung2-anh2 img {
+			width: 100%;
+		}
+		/*phan giua khung 3*/
+		.khung3{
+			margin: 90px 0 ;
+
+		}
+		.khung3-chu {
+   			 margin-left: 10px;
+}
+		.khung3-hinh{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: #ff5200;
+		}
+		.khung3-khung-giong{
+			display: inline-flex;
+			width: 25%;
+			padding-left: 7%;
+			
+		}
+		.khung3-chu>p{
+			margin-top:0;
+		}
+		.khung3-hinh{
+
+			display: inline-block;
+		}
+		.khung3-chu{
+			width: 60%;
+			display: inline-block;
+		}
+		.khung3-right{
+		
+		}
+		/*phan giua khung 4*/
+		.khung4{
+			background-color: #ff5200;
+			color: #fff;
+			text-align: center;
+			height: 200px;
+
+		}
+		.khung4 .khung4-tieude-1{
+
+			font-size: 20px;
+			padding-top: 51px;
+		}
+		.khung4-tieude-2{
+			font-size: 13px;
+		}
+		.khung4-o-1{
+			border-radius: 20px;
+			width: 15%;
+			height: 30px;
+			background-color: #fff;
+			color: #000;
+			display: inline-block;
+		}
+		.khung4-o-1>p{
+			line-height: 30px;
+			margin: 0;
+			font-size: 1em;
+		}
+
+		/*phan giua khung 5*/
+		.anh-anh{
+			text-align: center;
+			width: 20%;
+			display: inline-block;
+		}
+		.khung5-anh-1{
+			padding-left: 10%;
+		}
+		/*phan cuối*/
+		footer{
+			padding: 0 10%;
+			margin: 0 auto;
+		}
+		.footer-2{
+			background-color: #000;
+			color: #fff;
+		}
+		.footer-2-left{
+			
+			display: inline-block;
+		}
+		.footer-2-left>p{
+			
+			 margin-left: 30px;
+		
+		}
+		.footer-2-right{
+			display: inline-block;
+			margin-left: 120px;
+			
+		}
+		.footer-2-right-menu{
+			
+			margin: 0;
+		}
+		.footer-2-right-menu .item{
+			list-style: none;
+			padding-right: 30px;
+			float: left;
+			
+		}
+		.footer-2-right-menu .item>a{
+			text-decoration: none;
+			color: #fff;
+			
+		}
+		.footer-1{
+			display: inline-flex;
+			background-color: #000000d1;
+			color: #fff;
+		
+
+		}
+		.footer-1 h3{
+			 padding-top: 40px;
+
+		}
+		.footer-1-left{
+			padding-left: 10%;
+			width: 25%;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.footer-1-content{
+			width: 25%;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.footer-1-right{
+			width: 25%;
+			display: inline-block;
+		}
+			
+		@media (max-width: 376px) {
+			.menu .menu-left>h1 {
+			     	padding-left: 0px; 
+			    	margin:0;
+			}
+			.menu .menu-right .item{
+				display: none;
+			}
+
+			.menu .menu-right {
+   				 margin-left: 110px;
+			}
+			.menu .menu-right ul{
+				margin: 0;
+			}
+			.menu .menu-right .item:first-child{
+				display: block;
+				float: none;
+			}
+			
+			.khung3-khung-giong{
+				display: block;
+				width: 100%;
+			}
+			.khung3-khung-giong .hinh-tron{
+				float: left; 
+			}
+			.anh-anh{
+				display: block;
+				width: 100%;
+			}
+			.khung5-anh-1 {
+			     padding-left: 0%; 
+			}
+			.khung4-o-1 {
+				width: 31%;
+			}
+			.khung4-o-1>p {
+			font-size: 10px;
+			}
+			.footer-1-left{
+				padding-left: 0%;
+				display: block;
+				width: 100%;
+				margin-left: 0;
+			}
+			.footer-1-content{
+				display: block;
+				width: 100%;
+			}
+			.footer-1-right{
+				display: block;
+				width: 100%;
+			}
+			.footer-1{
+				padding: 0 5%;
+				display: block;
+			}
+			.footer-2-right{
+				margin-left: 0;
+			}
+			.footer-2-left>p {
+			 margin-left: 0px; 
+			}
+			.footer-2-right-menu .item {
+			    
+			    padding-right: 7px;
+			}
+			footer{
+			 	padding: 0;
+			}
+			
+@media (max-width: 769px) and (min-width:376px ){
+		.menu .menu-right {
+    		margin-left: 29px;
+		}
+		.menu .menu-left>h1 {
+		    padding-left: 0px;
+		    margin-bottom: 0;
+		}
+		.menu .menu-right .item {
+		    padding-right: 23px;
+		}
+		.khung2-anh1 {
+     		display:block; 
+     		margin-left: 20%;
+		}
+		.khung2-anh2 {
+     		display:block; 
+     		margin-left: 20%;
+		}
+		.khung3-khung-giong{
+				display: block;
+				width: 100%;
+				margin-bottom: 10%;
+			}
+		.khung3-khung-giong .hinh-tron{
+			float: left; 
+		}
+		.anh-anh{
+				display: block;
+				width: 100%;
+		}
+		.khung5-anh-1 {
+			     padding-left: 0%; 
+		}
+		.footer-1-left{
+				padding-left: 0%;
+				display: block;
+				width: 100%;
+			}
+			.footer-1-content{
+				display: block;
+				width: 100%;
+			}
+			.footer-1-right{
+				display: block;
+				width: 100%;
+			}
+			.footer-1{
+				padding: 0 5%;
+				display: block;
+			}
+			.khung4-o-1 {
+			    width: 28%;
+			}
+
+}
