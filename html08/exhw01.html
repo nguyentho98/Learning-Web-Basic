@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+			function bai1() {
+				var n=7;
+
+				for (var i = n; i >= 0; i--) {
+					for (var j = i- 1; j >= 0; j--) {
+						document.write( '#');
+					}
+					document.write("<br />");
+				}
+				for (var i = n - 1; i >= 0; i--) {
+					for (var j =n - 1; j >= 0; j--) {
+					  document.write('#')
+					}
+					document.write("<br />")
+				}
+				for (var i = 1; i <=6; i++) {
+						for (var j = 1; j <=i ; j++) {
+							 document.write('#')
+						}
+							document.write("<br />")
+					}
+				for (var i = 1; i <= n; i++) {
+						for (var j = 1; j <= n; j++) {
+							
+								if (i==1 ||i==n ||j==1||j==n) {
+										document.write('#')
+										if (j==n){
+											document.write("<br />");
+											}
+									}else 
+										{
+											document.write('0');
+									}
+
+								}		 
+								
+						}
+						
+			}
+			function bai2(){
+				var n=20;
+				var tong=0;
+				for (var i = 1 ; i <=n; i++) {
+					if (i%2==0) {
+						tong+=i;
+					}
+				}
+				document.write(tong)
+			}
+			function bai3(){
+				var n=prompt('Moi ban nhap so phan tu')
+				var A = new Array();
+				var tong=0;
+				for (var i =n-1; i >= 0; i--) {
+					A[i]=prompt('nhap so');
+					tong+=parseInt(A[i]);
+				}
+				document.write(tong)
+			}
+			function bai4(){
+				var tong=0;
+				var k=prompt('Moi nhap k')
+				var n=prompt('Moi nhap n')
+				var m=prompt('Moi nhap m')
+				for (var i = n; i <m; i++) {
+						if (i%k==0) {
+							tong+=parseInt(i);
+						}	
+					}
+					document.write(tong)
+				}
+			function bai5(){
+				var n=parseInt(prompt('Moi nhap n'))
+				var giaiThua=1;
+				var sum=0;
+				for (var i = n-1; i >0 ; i--) {
+					giaiThua *= i;
+            		sum += parseFloat(i / (giaiThua));
+				}
+			
+				document.write(sum);
+			}	
+			function bai6(){
+				var n=prompt('Moi ban nhap so phan tu')
+				var A = new Array();
+				var tong=0;
+				for (var i =n-1; i >= 0; i--) {
+					A[i]=prompt('nhap so');
+					tong+=parseInt(A[i]);
+				}
+				document.write(tong)
+			}
+			function bai7(){
+				var n=prompt('Moi ban nhap so phan tu')
+				var A = new Array();
+				var tong=0;
+				for (var i=n-1; i > 0; i--) {
+					
+					A[i]=parseInt(prompt('nhap so')) 
+						tong+=parseInt(A[i])
+					
+				}
+				document.write(tong)
+			}	
+
+	</script>
+	<button onclick="bai1()">Bai1</button>
+	<button onclick="bai2()">Bai2</button>
+	<button onclick="bai3()">Bai3</button>
+	<button onclick="bai4()">Bai4</button>
+	<button onclick="bai5()">Bai5</button>
+	<button onclick="bai6()">Bai6</button>
+	<button onclick="bai7()">Bai7</button>
+</body>
+</html>

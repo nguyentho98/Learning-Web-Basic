@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="../images/123.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" 
+		width="200" height="200" alt="Smiley">
+	<script type="text/javascript">
+		function bigImg(x) {
+			x.style.height = "500px";
+			x.style.width = "500px";
+		}
+		function normalImg(x) {
+			x.style.height = "200px";
+			x.style.width = "200px";
+		}
+	</script>
+</body>
+</html>
