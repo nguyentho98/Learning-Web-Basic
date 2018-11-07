@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		p{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p id="input">Chào Ekko</p>
+	<button id="macdinh">Mặc định</button>
+	<button id="nho">Nhỏ</button>
+	<button id="lon">Lớn</button>
+	<script type="text/javascript">
+		var min=8;
+		var max=100;
+
+		document.getElementById('lon').addEventListener('click', function() {
+			
+			var p = document.getElementsByTagName('p');
+	
+			for(i=0;i<p.length;i++) {
+				
+				if(p[i].style.fontSize) {
+					var s = parseInt(p[i].style.fontSize.replace("px",""));
+					p[i].style.fontSize = s+"px"
+				} else 
+				{
+					
+					var s = 20;
+				}
+				if(s!=max) {
+					
+					s += 8;
+				}
+				p[i].style.fontSize = s+"px"
+				
+			}
+		})
+		document.getElementById('nho').addEventListener('click', 
+		function() {
+			var p = document.getElementsByTagName('p');
+			for(i=0;i<p.length;i++) {
+
+				if(p[i].style.fontSize) {
+					var s = parseInt(p[i].style.fontSize.replace("px",""));
+				} else {
+
+					var s = 12;
+				}
+				if(s!=min) {
+
+					s -= 8;
+				}
+				p[i].style.fontSize = s+"px"
+
+			}
+		})
+		document.getElementById('macdinh').addEventListener('click', 
+		function(){
+			document.getElementById("input").style.fontSize = '20px';
+		})
+		 
+
+	</script>
+</body>
+</html>

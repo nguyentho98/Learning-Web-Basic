@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.ekko>td{
+			border:1px solid ;
+		}
+		.ekko>td{
+			width: 40px;
+		}
+		.ekko .ekko1{
+			width: 250px;
+		}
+		
+		.ekko:hover{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr class="ekko">
+			<td><input type="checkbox"></td>
+			<td class="ekko1">ekko1</td>
+		</tr>
+		<tr class="ekko">
+			<td><input type="checkbox"></td>
+			<td class="ekko1">ekko2</td>
+		</tr>
+		<tr class="ekko">
+			<td><input type="checkbox"></td>
+			<td class="ekko1">ekko3</td>
+		</tr>
+		<tr class="ekko">
+			<td><input type="checkbox"></td>
+			<td class="ekko1">ekko4</td>
+		</tr>
+		<tr class="ekko">
+			<td><input type="checkbox" ></td>
+			<td class="ekko1">ekko5</td>
+		</tr>
+		<tr class="ekko">
+			<td><input type="checkbox" ></td>
+			<td class="ekko1">ekko6</td>
+		</tr>
+		
+
+	</table>
+	<button onclick="check()">Check</button>
+	<button onclick="uncheck()">Uncheck</button>
+
+	<script>
+	
+		function check(){
+			var inputs=document.getElementsByTagName('input');
+			for (var i = inputs.length - 1; i >= 0; i--) {
+	 			inputs[i].checked=true;
+		}
+	}
+
+		function uncheck() {
+			var inputs=document.getElementsByTagName('input');
+			for (var i = inputs.length - 1; i >= 0; i--) {
+	 			inputs[i].checked=false;
+		}
+	}
+	</script>
+</body>
+</html>
