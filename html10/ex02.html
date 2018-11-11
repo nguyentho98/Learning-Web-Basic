@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	
+	input.form-control {
+		width: 45%;
+	}
+	span{
+		color: red;
+	}
+	label{
+		width: 15%;
+		float: left;
+		margin-left: 5%;
+	}
+	.form-group{
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+	.container{
+		width: 60%;
+		margin: 0 auto;
+		border-radius: 30px;
+		border:2px solid;
+	}
+	.control #add{
+
+		margin-left: 400px;
+    	margin-top: 20px;
+    	float: left;
+    	background-color: red;
+    	color: #fff;
+    	width: 80px;
+    	height: 30px;
+	}
+	.control #xoa{
+		margin-top: 20px;
+    	margin-left: 400px;
+    	background-color: red;
+    	color: #fff;
+    	width: 80px;
+    	height: 30px;
+	}
+</style>
+</head>
+<body>
+	<form action="">
+	<div class="container">
+	
+		<div class="form-group">
+			<label>Họ và Tên</label>
+			<input type="text"  name="name" class="form-control" id="name">
+			<span class="error" id="errorName"></span>
+		</div>
+		<div class="form-group">
+			<label>Giới Tính</label>
+			<input type="radio" name="A">Nam
+			<input type="radio" name="A">Nữ
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="email" name="name" class="form-control" id="email"  >
+			<span class="error" id="errorEmail"> </span>
+		</div>
+		<div class="form-group">
+			<label>Số Điện Thoại</label>
+			<input type="text" name="name" class="form-control" id="mobile">
+			<span class="error" id="errorMobile"></span>
+
+		</div>
+		<div class="form-group">
+			<label>Mật Khẩu</label>
+			<input type="password" name="name" class="form-control" id="password" >
+			<span class="error" id="errorPassword"></span>
+		</div>
+		<div class="form-group">
+			<label>Xác Nhận Mật Khẩu</label>
+			<input type="password" name="name" class="form-control" id="xacnhan" >
+			<span class="error" id="errorXacnhan"></span>
+		</div>
+		
+	</div>
+		<div class="control">
+			<button id="add">Đăng Ký</button>
+		</div>
+		<div class="control">
+			<button id="xoa">Xóa Trắng</button>
+		</div>
+	</form>
+	<script type="text/javascript">
+			function checkPhoneNumber(phone) {
+		    var flag = false;
+		    
+		    phone = phone.replace('(+84)', '0');
+		    phone = phone.replace('+84', '0');
+		    phone = phone.replace('0084', '0');
+		    phone = phone.replace(/ /g, '');
+		    if (phone != '') {
+		        var firstNumber = phone.substring(0, 2);
+		        if ((firstNumber == '09' || firstNumber == '08'||
+		        	firstNumber == '03' || firstNumber == '05' ||
+		        	firstNumber == '07' || firstNumber == '04' || firstNumber == '02') && phone.length == 10) {
+		            if (phone.match(/^\d{10}/)) {
+		                flag = true;
+		            }
+		       
+		        	}
+		    	}
+	    		return flag;
+			}
+			function validateEmail(email) {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(String(email).toLowerCase());
+			}
+			document.getElementById('add').addEventListener('click',function(e){
+			e.preventDefault();
+			var dem=0;
+			var name=document.getElementById('name')
+			var email=document.getElementById('email')
+			var password=document.getElementById('password')
+			var mobile=document.getElementById('mobile')
+			var xacnhan=document.getElementById('xacnhan')
+			if (name.value.trim()=='') {
+				document.getElementById('errorName').innerHTML='Yêu cầu nhập đủ họ và tên';
+			}else {
+	
+				document.getElementById('errorName').innerHTML='';;
+			}
+			// email
+			if (email.value.trim()=='') {
+				document.getElementById('errorEmail').innerHTML='Yêu cầu nhập Email';
+			}else if (!validateEmail(email.value)) {
+				document.getElementById('errorEmail').innerHTML='Sai định dạng Email'
+			}else{
+
+				document.getElementById('errorEmail').innerHTML='';
+			}
+			// password
+			if (password.value.trim()=='') {
+				document.getElementById('errorPassword').innerHTML='Yêu cầu nhập Mật Khẩu';
+			}
+			else if (password.value.length<8) {
+				document.getElementById('errorPassword').innerHTML='Yêu cầu Mật Khẩu lớn hơn 8 ký tự';
+			}
+			else{
+
+				document.getElementById('errorPassword').innerHTML='';
+			}
+			//xac nhan
+			if (xacnhan.value.trim()=='') {
+				document.getElementById('errorXacnhan').innerHTML='Yêu cầu xác nhận Mật Khẩu';
+			} else if (password.value!=xacnhan.value) {
+				document.getElementById('errorXacnhan').innerHTML='Xác nhận không thành công';
+			}
+			else {
+	
+				document.getElementById('errorXacnhan').innerHTML='';
+			}
+			// mobile
+			if (mobile.value.trim()=='') {
+				document.getElementById('errorMobile').innerHTML='Yêu cầu nhập Số điện thoại';
+			}else if (!checkPhoneNumber(mobile.value)) {
+				document.getElementById('errorMobile').innerHTML='Sai định dạng Số điện thoại';
+			} else{
+	
+				document.getElementById('errorMobile').innerHTML='';
+			}
+			
+
+		} )
+			document.getElementById('xoa').addEventListener('click',function(e){
+			e.preventDefault();
+			var name=document.getElementById('name')
+			var email=document.getElementById('email')
+			var password=document.getElementById('password')
+			var mobile=document.getElementById('mobile')
+			var xacnhan=document.getElementById('xacnhan')
+			if (name.value.trim()!=''){
+				document.getElementById('name').innerHTML='';
+			}
+			if (email.value.trim()!=''){
+					document.getElementById('email').innerHTML='';
+			}
+			if (password.value.trim()!=''){
+					document.getElementById('password').innerHTML='';
+			}
+			if (xacnhan.value.trim()!=''){
+					document.getElementById('xacnhan').innerHTML='';
+			}
+			if (mobile.value.trim()!=''){
+					document.getElementById('mobile').innerHTML='';
+			}
+
+		})
+
+		
+	</script>
+</body>
+</html>

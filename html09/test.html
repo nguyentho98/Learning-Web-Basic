@@ -3,43 +3,76 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<style type="text/css">
-		.menu .item>a{
-			text-decoration: none;
-			line-height: 40px;
-			color: #000;
-			padding-left: 12px;
-		}
-		.menu .item{
+	.tab>button{
+		border:none;
+		background-color: red;
+		cursor: pointer;
+		line-height: 30px;
+		transition: 0.3s;
 
-			width: 40px;
-			list-style: none;
-			float: left;
-			padding-right: 20px;
-		}
-		.menu{
-			padding-left: 0;
-			height: 40px;
-			background-color: red;
-			width: 80%;
-			margin: 0 auto;
-		}
-		.menu .item:hover{
-			background-color: #fff;
-		}
-	</style>
+	}
+	.tab {
+		height: 30px;
+		width: 50%;
+		margin: 0 auto;
+		border: 1px solid #ccc;
+		background-color: #f1f1f1;
+	}
+	.tab button:hover {
+		background-color: #ddd;
+	}
+	.onechamp{
+	
+		width: 50%;
+		margin: 0 auto;
+		border: 1px solid #ccc;
+	}
+	#ekko2{
+		display: none;
+	}
+	#ekko3{
+		display: none;
+	}
+ .active{
+ 	background-color: white!important;
+ }
+
+
+</style>
 </head>
 <body>
-	<nav>
-		<ul class="menu">
-			<li class="item"><a href="">Thọ1</a></li>
-			<li class="item"><a href="">Thọ1</a></li>
-			<li class="item"><a href="">Thọ1</a></li>
-			<li class="item"><a href="">Thọ1</a></li>
-			<li class="item"><a href="">Thọ1</a></li>
-			<li class="item"><a href="">Thọ1</a></li>
-			
-		</ul>
-	</nav>
+	<div class="tab">
+		<button class="ekko active" id="bt-1" onclick="openEkko(1)">Ekko1</button>
+		<button class="ekko" id="bt-2" onclick="openEkko(2)">Ekko2</button>
+		<button class="ekko" id="bt-3" onclick="openEkko(3)">Ekko3</button>
+	</div>
+	<div id="ekko1" class="onechamp">
+		<h2>Chào Ekko</h2>
+		<p><img src="../images/123.jpg" alt=""></p>
+	</div>
+	<div id="ekko2" class="onechamp">
+		<h2>Yêu Ekko</h2>
+		<p><img src="../images/123.jpg" alt=""></p>
+	</div>
+	<div id="ekko3" class="onechamp">
+		<h2>One Champ Ekko</h2>
+		<p><img src="../images/123.jpg" alt=""></p>
+	</div>
+	<script>
+		function openEkko(number) {
+			var onechamp = document.getElementsByClassName("onechamp");
+			for (var i = 0; i < onechamp.length; i++) {
+				onechamp[i].style.display = "none";
+			}
+			document.getElementById("ekko"+number).style.display = "block";
+			var active = document.getElementsByClassName("active");
+				active[0].classList.remove("active");
+			document.getElementById("bt-"+number).classList.add("active");
+		}
+		
+	</script>
+
 </body>
 </html>
