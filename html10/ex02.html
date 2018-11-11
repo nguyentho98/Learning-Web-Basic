@@ -22,7 +22,7 @@
 	}
 	.container{
 		width: 60%;
-		margin: 0 auto;
+		margin: 150px auto 0;
 		border-radius: 30px;
 		border:2px solid;
 	}
@@ -44,6 +44,9 @@
     	width: 80px;
     	height: 30px;
 	}
+	body{
+		background-image: url(images/bg.jpg);
+	}
 </style>
 </head>
 <body>
@@ -52,22 +55,22 @@
 	
 		<div class="form-group">
 			<label>Họ và Tên</label>
-			<input type="text"  name="name" class="form-control" id="name">
+			<input type="text"  name="name" class="form-control" placeholder="Họ và tên..." id="name">
 			<span class="error" id="errorName"></span>
 		</div>
 		<div class="form-group">
 			<label>Giới Tính</label>
-			<input type="radio" name="A">Nam
-			<input type="radio" name="A">Nữ
+			<input type="radio" name="A" required="true">Nam
+			<input type="radio" name="A" required="true">Nữ
 		</div>
 		<div class="form-group">
 			<label>Email</label>
-			<input type="email" name="name" class="form-control" id="email"  >
+			<input type="email" name="name" class="form-control" placeholder="Nhập Email" id="email"  >
 			<span class="error" id="errorEmail"> </span>
 		</div>
 		<div class="form-group">
 			<label>Số Điện Thoại</label>
-			<input type="text" name="name" class="form-control" id="mobile">
+			<input type="text" name="name" class="form-control" id="mobile" placeholder="Nhập số điện thoại">
 			<span class="error" id="errorMobile"></span>
 
 		</div>
@@ -126,7 +129,6 @@
 			if (name.value.trim()=='') {
 				document.getElementById('errorName').innerHTML='Yêu cầu nhập đủ họ và tên';
 			}else {
-	
 				document.getElementById('errorName').innerHTML='';;
 			}
 			// email
