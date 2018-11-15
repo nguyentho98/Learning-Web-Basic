@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="" name="" id="input">
+	<button id="add">Add</button>
+	<button id="del-all">Delete All</button><br>
+	<button id="toggle-check">Toggle Check</button>
+	<table>
+		<tbody id="content">
+			
+		</tbody>
+	</table>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#add').click(function(){
+				var input=$('#input').val()
+				if (input.trim()=='') {
+	 			alert('Mày phải nhập nội dung vào')
+	 			return;
+	 			}
+				$('#content').prepend(`<tr>
+				<td>
+					<input type="checkbox" name="" class="checkbox">
+				</td>
+				<td>`+input+`</td>
+				<td><button class="edit" content=`+input+`>edit</button></td>
+				<td><button class="del">x</button></td>
+			</tr>`)
+				$('#input').val('')
+			})
+
+		})
+		$('body').on('click','.del',function(){
+			$(this).parent().parent().remove();
+		})
+		$('#toggle-check').click(function(){
+			var checkbox=$('.checkbox');
+			for (var i = checkbox.length - 1; i >= 0; i--) {
+				if (checkbox[i].checked) {
+					checkbox[i].checked=false;
+				}else {
+					checkbox[i].checked=true;
+				}
+			}
+		})
+		$('body').on('click','.edit',function(){
+		var content=$(this).attr('content');
+		$('#input').val(content)
+		
+		})
+
+	</script>
+</body>
+</html>
