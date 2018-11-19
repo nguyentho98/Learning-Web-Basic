@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<b>-----Iphone 6-----</b>
+	Bộ nhớ:<select id="ekko" name="size">
+			<option value="16">16 GB</option> 
+			<option value="32">32 GB</option> 
+			<option value="64">64 GB</option> 
+	</select>
+	<br>
+	<div id="gia">
+		Giá là 5.000.000 VNĐ
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#ekko').on('change',function(){
+				var value=$(this).val();
+				if (value==16) {
+					$('#gia').text('Giá là 5.000.000 VNĐ')
+				}
+				if (value==32) {
+					$('#gia').text('Giá là 6.000.000 VNĐ')
+				}
+				if (value==64) {
+					$('#gia').text('Giá là 7.000.000 VNĐ')
+				}
+			
+			})
+		})
+	</script>
+</body>
+</html>

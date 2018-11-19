@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#ekko{
+			width: 50%;
+			height: 200px;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="ekko"></div>
+	<input id="show" type="button" name="" value="Show">
+	<input id="hide" type="button" name="" value="Hide">
+	<input id="toggle" type="button" name="" value="Toggle">
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#show').on('click',function(){
+				$('#ekko').show(1000);
+			})
+			$('#hide').on('click',function(){
+				$('#ekko').hide(1000);
+			})
+			$('#toggle').on('click',function(){
+				$('#ekko').toggle(1000);
+			})
+			
+
+		})
+		
+	</script>
+</body>
+</html>

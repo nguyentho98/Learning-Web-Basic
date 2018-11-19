@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="ekko1">
+		<input type="button" value="Click" id="input1">
+		<p> Thẻ p </p>
+		<span>Thẻ span</span>
+		<ul>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+		</ul>
+	</div>
+	<div>
+		<input type="button" value="Click1" id="input2">
+		<p> Thẻ p </p>
+		<span>Thẻ span</span>
+		<ul>
+			<li id="ekko2">thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+		</ul>
+	</div>
+	<div>
+		<input type="button" value="Click2" id="input3">
+		<p> Thẻ p </p>
+		<span>Thẻ span</span>
+		<ul id="ekko3">
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li class="chon">thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+		</ul>
+	</div>
+	<div>
+		<input type="button" value="Click3" id="input4">
+		<p> Thẻ p </p>
+		<span>Thẻ span</span>
+		<ul id="ekko4">
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+			<li class="chon1">thẻ l1</li>
+			<li>thẻ l1</li>
+			<li>thẻ l1</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#input1').on('click',function(){
+				$('#ekko1').children().children().eq(1).css('color','red');
+				$('#ekko1').children().eq(2).css('color','red');
+			})
+			$('#input2').on('click',function(){
+				// $('#ekko2').children().children().eq(1).css('color','red');
+				$('#ekko2').parent().prev().css('color','red');
+			})
+			$('#input3').on('click',function(){
+				// $('#ekko3').children().children().eq(1).css('color','red');
+				$('#ekko3').children().not('.chon').css('color','red');
+			})
+			$('#input4').on('click',function(){
+				// $('#ekko4').children().children().eq(1).css('color','red');
+				$('#ekko4').children().filter('.chon1').css('color','red');
+			})
+		})
+	</script>
+</body>
+</html>

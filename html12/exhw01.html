@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		form{
+			width: 50%;
+			margin: 0 auto;
+			height: 400px;
+		}
+		ul li{
+			display: inline-block;
+			list-style: none;
+			width: 120px;
+			height: 40px;
+			background-color: #eee;
+			text-align: center;
+			
+			border-radius: 5px;
+		}
+		ul li a{
+			text-decoration: none;
+			font-size: 20px;
+			color: #aaa;
+			line-height: 40px;
+			
+		}
+		.nut{
+			background-color: #2184be;
+			color: #fff;
+			width: 80px;
+			height: 30px;
+			border: none;
+			border-radius: 5px;
+
+		}
+		.form-control{
+			position: absolute;
+			 margin-top: 20px;
+   			 margin-left: 40px;
+		}
+		.from{
+			width: 100%;
+			height: 350px;
+			background: #eee;
+			position: relative;
+			display: block;
+			border-radius: 5px;
+			
+		}
+		.footer{
+			margin-left: 500px;
+			margin-top:10px;
+		}
+		span{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		
+		<ul>
+			<li class="item" id="account"><a href="">1.Account</a></li>
+			<li class="item" id="profile"><a href="">2.Profile</a></li>
+			<li class="item" id="warning"><a href="">3.Warning</a></li>
+			<li class="item" id="finish"><a href="">4.Finish</a></li>
+		</ul>
+		<div class="from">
+			<div class="form-control" id="ekko1">
+				<h3>Account Information</h3>
+				<div class="form-group">
+					<label>User name *</label><br>
+					<input type="text" name="" id="user" >
+					<span id="errorUser"></span>
+				</div>
+				<div class="form-group">
+					<label>Password *</label><br>
+					<input type="password" name="" id="password">
+					<span id="errorPassword"></span>
+				</div>
+				<div class="form-group">
+					<label>Confirm Password *</label><br>
+					<input type="password" name="" id="confirmpw">
+					<span id="errorConfirmpw"></span>
+				</div>
+				<p>(*) Mandatory</p>
+			</div>
+			<div class="form-control" id="ekko2">
+				<h3>Profile Information</h3>
+				<div class="form-group">
+					<label>First Name *</label><br>
+					<input type="text" name="" id="first">
+					<span id="errorFirst"></span>
+				</div>
+				<div class="form-group">
+					<label>Last name *</label><br>
+					<input type="text" name="" id="last">
+					<span id="errorLast"></span>
+				</div>
+				<div class="form-group">
+					<label>Email *</label><br>
+					<input type="text" name="" id="email">
+					<span id="errorEmail"></span>
+				</div>
+				<div class="form-group">
+					<label>Address </label><br>
+					<input type="text" name="" id="address">
+					<span id="errorAddress"></span>
+				</div>
+				<div class="form-group">
+					<label>Age(the warning step wil show up if age is less than 18)*</label><br>
+					<input type="text" name="" id="age">
+					<span id="errorAge"></span>
+				</div>
+			</div>
+			<div class="form-control" id="ekko3">	
+				<h3>You are to young</h3>
+				<p>Please go away</p>
+			</div>
+			<div class="form-control" id="ekko4">
+				<h3>Terms and Conditions</h3>
+				<span id="errorcheckbox"></span>
+				<input type="checkbox" name="" id="checkbox" >
+				<label>I agree with the Terms and Conditions.</label>
+			</div>
+		</div>
+	 	<div class="footer">
+			<input type="button" value="Previous" id="previous" class="nut">
+			<input type="button" value="Next" id="next" class="nut">
+	 	</div>
+	</form>
+	
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		function validateEmail(email) {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(String(email).toLowerCase());
+			}
+		$(function (){
+			$('.form-control').hide();
+			$('#ekko1').show();
+			$('#account').css('background','#2184be').children().css('color','#fff');
+			var dem1=0;
+			var dem2=0;
+			var dem3=0;
+			var dem4=0;
+			$('#next').on('click',function(e){
+				
+					e.preventDefault();
+					
+					var user=$('#user').val()
+					var password=$('#password').val()
+					var confirmpw=$('#confirmpw').val()
+					if (user.trim()=='') {
+						$('#errorUser').text('Mời bạn nhập tên tài khoản')
+						dem1++;
+					}else {
+						$('#errorUser').text('');
+					}
+
+					if (password.trim()=='') {
+						$('#errorPassword').text('Mời bạn nhập mật khẩu')
+						dem1++;
+					}else{
+						$('#errorPassword').text('');
+					}
+
+					if (confirmpw.trim()=='') {
+						$('#errorConfirmpw').text('Mời bạn nhập lại mật khẩu')
+						dem1++;
+					}else if (password!=confirmpw) {
+						$('#errorConfirmpw').text('Bạn phải nhập trùng mật khẩu')
+						dem1++;
+					}else{
+						$('#errorConfirmpw').text('');
+					}
+					if (dem1==0) {
+						$('#account').css('background','#eee').children().css('color','#aaa');
+						$('#profile').css('background','#2184be').children().css('color','#fff');
+						$('#ekko1').hide();
+						$('#ekko2').show();
+						$('#next').on('click',function(e){
+							e.preventDefault();
+							var dem2=0;
+							var first=$('#first').val();
+							var last=$('#last').val();
+							var email=$('#email').val();
+							var address=$('#address').val();
+							var age=$('#age').val();
+							if (first.trim()=='') {
+								$('#errorFirst').text('Mời bạn nhập tên')
+								dem2++;
+							}else{
+								$('#errorFirst').text();
+							}
+
+							if (last.trim()=='') {
+								$('#errorLast').text('Mời bạn nhập Họ')
+								dem2++;
+							}else{
+								$('#errorLast').text('');
+							}
+							if (email.trim()=='') {
+								$('#errorEmail').text('Mời bạn nhập Email')
+								dem2++;
+							}else if (!validateEmail(email)) {
+								$('#errorEmail').text('Sai định dạng Email')
+								dem++;
+							}else{
+								$('#errorEmail').text('')
+							}
+							if (address.trim()=='') {
+								$('#errorAddress').text('Mời bạn nhập Address')
+								dem2++;
+							}else{
+								$('#errorAddress').text('')
+							}
+							if (age.trim()=='') {
+								$('#errorAge').text('Mời bạn nhập Age')
+								dem2++;
+							}else{
+								$('#errorAge').text('')
+							}
+							if (dem2==0 && age<18) {
+								dem3=1;
+								$('#profile').css('background','#eee').children().css('color','#aaa');
+								$('#warning').css('background','#2184be').children().css('color','#fff');
+								$('#ekko2').hide();
+								$('#ekko3').show();
+							} else if (dem2==0 && age>=18) {
+								dem4=1;
+								$('#profile').css('background','#eee').children().css('color','#aaa');
+								$('#finish').css('background','#2184be').children().css('color','#fff');
+								$('#ekko2').hide();
+								$('#ekko4').show();
+								$('#next').on('click',function(){
+									if ($('#checkbox').prop('checked')){
+										alert('Bạn đã thành công ahihi!');
+
+									}else{
+										$('#errorcheckbox').text('Mời bạn chọn')
+									}
+								})
+							}
+
+						})
+						
+					}
+			})
+
+			$('#previous').on('click', function(){
+				
+				if(dem1==0 && dem3==0 &&dem4==0){
+					
+					$('#ekko2').hide();
+					$('#ekko1').show();
+					$('#account').css('background','#2184be').children().css('color','#fff');
+					$('#profile').css('background','#eee').children().css('color','#aaa');
+				}
+				if(dem3==1){
+					dem3=0;
+					$('#ekko3').hide();
+					$('#ekko2').show();
+					$('#ekko1').hide();
+					$('#profile').css('background','#2184be').children().css('color','#fff');
+					$('#warning').css('background','#eee').children().css('color','#aaa');
+					$('#account').css('background','#eee').children().css('color','#aaa');
+
+				}
+				if(dem4==1 ){
+					dem4=0;
+					$('#ekko4').hide();
+					$('#ekko2').show();
+					$('#ekko1').hide();
+					$('#profile').css('background','#2184be').children().css('color','#fff');
+					$('#finish').css('background','#eee').children().css('color','#aaa');
+					$('#account').css('background','#eee').children().css('color','#aaa');
+				}
+				
+			})
+			
+		})
+								 
+								
+										
+		
+	</script>
+</body>
+</html>
