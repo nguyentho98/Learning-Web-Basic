@@ -3,16 +3,91 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<style type="text/css">
-		#ekko{
+		/*#ekko{
 			width: 50%;
 			height: 200px;
 			background-color: black;
-		}
-	</style>
+			}*/
+			/*input{
+				width: 500px;
+				height: 100px;
+				border: 1px solid;
+				font-size: 20px;
+			}*/
+		</style>
+		<style>
+			body {
+				font-family: Arial;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			form.example input[type=text] {
+				padding: 10px;
+				font-size: 17px;
+				border: 1px solid #c3e5ef;
+				float: left;
+				width: 80%;
+				background: #c3e5ef;
+				text-align: right;
+			}
+
+			form.example button {
+				float: left;
+				width: 20%;
+				padding: 10px;
+				background: #c3e5ef;
+				color: white;
+				font-size: 17px;
+				border: 1px solid #c3e5ef;
+				border-left: none;
+				cursor: pointer;
+			}
+
+			form.example button:hover {
+				background: #c3e5ef;
+			}
+
+			form.example::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.iconS {
+				width:30%; 
+				position: absolute;
+				z-index: 100;
+			}
+			.input {
+				position: relative;
+				background-color: blue;
+				width: 100%;
+			}
+			.input input {
+		        width:70%;
+		        position: absolute;
+			}
+		</style>
 </head>
 <body>
 	<div id="ekko"></div>
+	<span id="search">Search</span>
+	<input type="text" name="" placeholder="Tìm Kiếm" id="tho">
+
+	<p>Centered inside a form with max-width:</p>
+	<form class="example" action="" style="margin:auto;max-width:300px">
+		<div class="input">
+			<button type="submit" class="iconS"><i class="fas fa-search"></i></button>
+			<input type="text" placeholder="Search.." name="search2">
+		</div>
+	</form>
+
+
+
 	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -22,8 +97,21 @@
 			$('#ekko').on('mouseleave',function(){
 				$(this).css('background','black');
 			})
+			$('#tho').on('click',function(){
+				if ($('#tho').val() == '') {
+					$(this).val('[MSSV] - [Họ Tên]')
+				}
+			})
+
+			$('#search').on('click',function(){
+				if ($('#tho').val() == '[MSSV] - [Họ Tên]') {
+					alert("[MSSV] - [Họ Tên]");
+				}else {
+					alert($('#tho').val());
+				}
+			})
 		})
-		
+
 	</script>
 </body>
 </html>

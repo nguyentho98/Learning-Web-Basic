@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<style type="text/css">
+		.footer{
+			
+			background-color: #003a6a ;
+			
+		}
+		.header{
+			color: #fff;
+			width: 80%;
+			margin: 0 auto;
+			background-color: #003a6a ;
+		}
+		.header-left .icon{
+			float: left;
+		}
+		.header-left{
+			
+			float: left;
+		}
+		.header-center{
+			
+			float: left;
+			margin: 34px 110px;
+			
+		}
+		.header-center .center{
+			display: inline-block;
+		}
+		.header-right{
+			
+			float: left;
+			margin: 73px 41px;
+			
+		}
+		
+		.clearfix{
+			clear: both;
+		}
+		.menu ul .item{
+			    list-style: none;
+			    float: left;
+			   	padding: 0 2%;
+			    text-align: center;
+			    cursor: pointer;
+			    border:1px solid  #00569d;
+			    border-bottom: none;
+		}
+		.menu .ekko .item:hover{
+			background-color: #003a6a ;
+		}
+		.item:hover .tainguyen{
+			display: block;
+			background-color: #003a6a ;
+		}
+		.menu ul .item a{
+			text-decoration: none;
+			color: #fff;
+			line-height: 40px;
+			text-align: center;
+
+
+		}
+		.menu .ekko .item .fas{
+			color: #fff;
+		}
+		.menu .ekko{
+			background-color: #004884;
+		    height: 40px;
+		    width: 65%;
+		    margin: 0 auto;
+		    padding-left: 0;
+		}
+		.tainguyen{
+			display: none;
+		}
+		.tainguyen li{
+			list-style: none;
+			text-align: center;
+		}
+		.sinhvien{
+			display: none;
+		}
+		.giangvien{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="footer">
+		<div class="header">
+			<div class="header-left">
+				<table>
+					<tr>
+						<td><i class="fas icon fa-phone-square"></i></td>
+						<td><p>01657004230</p></td>
+					</tr>
+					<tr>
+						<td><i class="far icon fa-envelope"></i></td>
+						<td><p>Nxtho0109@gmail.com</p></td>
+					</tr>
+				</table>
+			</div>
+			<div class="header-center">
+				<div class="anh center">
+					<img src="img/logo.png" alt="">
+				</div>
+				<div class="tieude center">
+					<p>BỘ MÔN CÔNG NGHÊ PHẦN MỀM</p>
+					<p> Software Engineering Department</p>
+					<p>KHoa CNTT-ĐHXD(fit.nuce)</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="header-right">
+				<!-- <ul>
+					<li><a href="">Giới thiệu</a></li>
+					<li><a href="">Đào tạo</a></li>
+					<li><a href="">Nghiên cứu</a></li>
+				</ul> -->
+				<table>
+					<tr>
+						<td>Giới thiệu</td>
+						<td>Đào tạo</td>
+						<td>Nghiên cứu</td>
+					</tr>
+				</table>
+				<div class="thuxem">
+					<form>	
+						<button><i class="fas fa-search"></i></button>
+						
+						<input type="text" name="" placeholder="tìm kiếm..." style="text-align: right;">
+					</form>
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+			
+		</div>
+	</div>
+	<!-- <div><img src="img/footer.PNG" alt=""></div> -->
+	<div class="menu">
+		<nav>
+			<ul class="ekko">
+				<li class="item"><a href=""><i class="fas fa-home"></i></a></li>
+				<li class="item"><a href="">Tài Nguyên </a><i class="fas fa-angle-down"></i>
+					<ul class="tainguyen">
+						<li><a href="">xin chào</a></li>
+						<li><a href="">ekko yêu</a></li>
+						<li><a href="">yêu ekko</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="">Tin tức-Sự kiện</a></li>
+				<li class="item"><a href="">Giảng viên </a><i class="fas fa-angle-down"></i>
+					<ul class="giangvien">
+						<li><a href="">xin chào</a></li>
+						<li><a href="">ekko yêu</a></li>
+						<li><a href="">yêu ekko</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="">Sinh viên </a><i class="fas fa-angle-down"></i>
+					<ul class="sinhvien">
+						<li><a href="">xin chào</a></li>
+						<li><a href="">ekko yêu</a></li>
+						<li><a href="">yêu ekko</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="">Tin tuyển dụng</a></li>
+				<div class="clearfix"></div>
+			</ul>
+			
+		</nav>
+	</div>
+</body>
+</html>
