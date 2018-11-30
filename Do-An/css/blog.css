@@ -1,0 +1,172 @@
+.fontroboto {   font-family: 'Roboto Slab', serif;}
+.onechamp{
+  font-family: 'Dancing Script', cursive;
+   color: #feb518;
+}
+/*<!--navbar-->*/
+a.navbar-brand {
+    margin-left: 60px;
+}
+li.nav-item {
+    margin-left: 30px;
+}
+ul.navbar-nav {
+	margin-left: 350px;
+}
+/*<!-- het navbar-->*/
+/*<!--tieude->*/
+.tieude h1{
+	text-align: center;
+	margin-top: 50px;
+}
+.tieude p{
+	text-align: center;
+	margin: 40px 0;
+}
+/*<!--het tieude-->*/
+nav.phantrang.mb-3.wow.fadeInUp {
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.hr-thin {
+	height: 0.5px;
+    width: 100%;
+    opacity: 0.1;
+    border: 0.5px solid;
+    background-color: #000;
+}
+.Comments{
+	/*bottom: -20px;*/
+    line-height: 100px;
+}
+/*<!--content->*/
+.item{
+	background-color: #e7440e;
+	text-align: center;
+	border-bottom: 5px solid #656464;
+    height: 40px;
+    width: 100%;
+}
+.content h3{
+	margin: 40px 0;
+}
+.bang{
+	padding-right: 0px;
+}
+.bang {
+	width: 100%;
+	
+}
+.bang i{
+	color: #adadad;
+}
+.cot{
+	border:1px solid #fff;
+	border-radius: 5px;
+}
+.hang{
+	background-color: #EEEEEE;
+	height: 40px;
+	width: 100%;
+}
+.input{
+	width: 100%;
+	height: 40px;
+}
+.ekkoekko img{
+	margin-bottom: 30px;
+}
+button.btn.giua.btn-info {
+    margin-bottom: 77px;
+}
+.ekko{
+	margin-bottom: 15px;
+}
+/*<!--het content-->*/
+nav.phantrang ul li {
+    display: inline-block;
+}
+
+nav.phantrang ul {
+    list-style: none;
+    display: inline-block;
+}
+
+nav.phantrang {
+    text-align: center;
+}
+
+nav.phantrang ul li a,nav.phantrang ul li.current {
+    display: inline-block;
+    color: #333;
+    /* padding: 13px; */
+    font-family: roboto slab;
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-radius: 22px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+nav.phantrang ul li.pre a,nav.phantrang ul li.next a {
+    width: 110px;
+}
+nav.phantrang ul li.current, nav.phantrang ul li a:hover {
+    border-color: #feb518;
+    background: #feb518;
+    color: white;
+    text-decoration: none;
+}
+/*<!--footertop->*/
+.footertop .container{
+	background-color: #333333;
+	color: #fff;
+}
+.footertop .fas{
+	line-height: 30px;
+}
+.footertop .fab{
+	line-height: 30px;
+}
+.topekko{
+	margin: 80px 0;
+	padding-left: 40px;
+}
+.tron {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+hr{
+	background-color: #fff;
+}
+.a{
+	background-color:  #EEEEEE;
+	border: 1px solid #fff;
+	color: #000;
+}
+
+/*<!--het footertop-->*/
+/*<!--footerbottom->*/
+.footerbottom .container{
+	background-color: #000;
+	color: #fff;
+	height: 45px;
+}
+.col-sm-7.ekko p {
+    line-height: 45px;
+    margin-left: 60px;
+}
+.col-sm-5.ekko1 {
+    line-height: 45px;
+}
+.footerbottom td {
+    padding-right: 40px;
+
+}
+/*<!--het footerbottom-->*/

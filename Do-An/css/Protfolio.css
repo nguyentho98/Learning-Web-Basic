@@ -1,0 +1,83 @@
+.fontroboto {   font-family: 'Roboto Slab', serif;}
+.onechamp{
+  font-family: 'Dancing Script', cursive;
+   color: #feb518;
+}
+/*<!--navbar-->*/
+a.navbar-brand {
+    margin-left: 60px;
+}
+li.nav-item {
+    margin-left: 30px;
+}
+ul.navbar-nav {
+    margin-left: 350px;
+}
+/*<!-- het navbar-->*/
+
+/*<!--tieude->*/
+.tieude h1{
+    text-align: center;
+    margin-top:60px;
+}
+.tieude p{
+    text-align: center;
+    margin-bottom: 60px;
+}
+ul.simplefilter {
+
+    margin: 0 auto 35px ;
+}
+/*<!--het tieude-->*/
+
+/*<!--content->*/
+.push-down{
+    margin-bottom: 60px;
+}
+/*<!--het content-->*/
+
+/*<!--footertop->*/
+.footertop .container{
+	background-color: #333333;
+	color: #fff;
+}
+.footertop .fas{
+	line-height: 30px;
+}
+.footertop .fab{
+	line-height: 30px;
+}
+.topekko{
+	margin: 80px 0;
+	padding-left: 40px;
+}
+.tron {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+hr{
+    background-color: #fff;
+}
+/*<!--het footertop-->*/
+/*<!--footerbottom->*/
+.footerbottom .container{
+	background-color: #000;
+	color: #fff;
+	height: 45px;
+}
+.col-sm-7.ekko p {
+    line-height: 45px;
+    margin-left: 60px;
+}
+.col-sm-5.ekko1 {
+    line-height: 45px;
+}
+.footerbottom td {
+    padding-right: 40px;
+
+}
+/*<!--het footerbottom-->*/
